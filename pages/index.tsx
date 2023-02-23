@@ -18,7 +18,7 @@ export default function Home() {
       <CenterContainer>
 
         {/* <EbookList /> */}
-        <h1 style={{ textAlign: "center", margin: "1rem" }}>Hier entsteht eine Demonstration für das Projekt "Si-Sa"</h1>
+        <h1 style={{ textAlign: 'center', margin: '1rem' }}>Hier entsteht eine Demonstration für das Projekt "Si-Sa"</h1>
       </CenterContainer>
     </>
   )
