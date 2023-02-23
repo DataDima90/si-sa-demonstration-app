@@ -9,7 +9,7 @@ const ProductView = ({ item }: any) => {
             </div>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            <p>{item.type}</p>
+            <button className={styles.button} style={{ backgroundColor: item?.type === "free" ? "blue" : "orange" }}><span>{item?.type}</span></button>
         </div>
     )
 }

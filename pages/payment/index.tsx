@@ -8,7 +8,7 @@ const Payment = () => {
 
     return (
         <CenterContainer style={{ flexDirection: "column" }}>
-            <h1 style={{ marginBottom: "1rem" }}>Start reading with a 7-day free trial</h1>
+            <h1 style={{ marginBottom: "1rem", textAlign: "center" }}>Start reading with a 7-day free trial</h1>
             <Button onClick={() => router.back()} title={"Go Back!"} />
         </CenterContainer>
     )

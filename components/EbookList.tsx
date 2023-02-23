@@ -6,16 +6,6 @@ import eBooks from '@/data/eBooks';
 import ProductView from './ProductView';
 import FlexContainer from '@/containers/FlexContainer';
 
-
-/* const eBooks = [
-    { id: "1", title: 'E-Book 1', type: 'free' },
-    { id: "2", title: 'E-Book 2', type: 'premium' },
-    { id: "3", title: 'E-Book 3', type: 'free' },
-    { title: 'E-Book 4', type: 'premium' },
-    { title: 'E-Book 5', type: 'free' },
-    { title: 'E-Book 6', type: 'premium' },
-]; */
-
 const EbookList = () => {
     const [filter, setFilter] = useState('all');
 

@@ -4,18 +4,11 @@ import { useRouter } from 'next/router';
 import FlexContainer from '@/containers/FlexContainer';
 import CenterContainer from '@/containers/CenterContainer';
 import ProductDetailView from '@/components/ProductDetailView';
-import PaymentWall from '@/components/PaymentView';
 import IProps from '@/types/types';
 
 const Ebook = ({ ebook }: any) => {
-    const [progress, setProgress] = useState(0);
-    const router = useRouter();
     return (
         <CenterContainer>
-            <Head>
-                <title>{ebook.title}</title>
-            </Head>
-
             <FlexContainer>
                 <ProductDetailView item={ebook} />
             </FlexContainer>
@@ -36,12 +29,13 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: any) {
     // TODO: Fetch e-book data from backend.
+    const bookTypes = ["free", "premium", "premium"]
     const ebook: IProps = {
         id: params.id,
         title: `E-Book ${params.id}`,
         description: `This is the description for E-Book ${params.id}.`,
         imageURL: "https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg",
-        type: "premium"
+        type: bookTypes[params.id],
     };
     return {
         props: {

@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import FlexContainer from '@/containers/FlexContainer'
-import { useRouter } from 'next/router'
-import EBOOK_DATA from '@/data/eBookData'
-import EbookList from "./../components/EbookList"
+import Image from 'next/image'
 import CenterContainer from '@/containers/CenterContainer'
+import Button from '@/components/Button'
+import { useRouter } from 'next/router'
 
 export default function Home() {
   const router = useRouter()
@@ -16,10 +15,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CenterContainer style={{ flexDirection: "column" }}>
-
-        {/* <EbookList /> */}
-        <img style={{ width: "500px" }} src={"https://img.freepik.com/free-vector/engineer-developer-with-laptop-tablet-code-cross-platform-development-cross-platform-operating-systems-software-environments-concept-bright-vibrant-violet-isolated-illustration_335657-312.jpg?w=1480&t=st=1677182818~exp=1677183418~hmac=6bbb1f470c02619de130f17fca146e6475cf778aab640f7351641478f9378da7"} />
+        <Image alt="hero-image" width={500} height={350} src={"https://img.freepik.com/free-vector/engineer-developer-with-laptop-tablet-code-cross-platform-development-cross-platform-operating-systems-software-environments-concept-bright-vibrant-violet-isolated-illustration_335657-312.jpg?w=1480&t=st=1677182818~exp=1677183418~hmac=6bbb1f470c02619de130f17fca146e6475cf778aab640f7351641478f9378da7"} />
         <h2 style={{ textAlign: 'center', margin: '1rem' }}>Hier entsteht eine Demonstration für das Projekt "Si-Sa".</h2>
+        <div>
+          <Button onClick={() => router.push("/ebooks")} style={{ marginRight: "1rem" }} title="Ebooks" />
+          <Button onClick={() => router.push("/upload-video")} title="Upload Videos" />
+        </div>
       </CenterContainer>
     </>
   )

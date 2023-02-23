@@ -1,10 +1,12 @@
 import style from "./Input.module.scss"
+import Button from "./Button"
 
 const Input = (props: any) => {
     return (
-        <div>
+        <label>
             <input className={style.input} type="file" {...props} />
-        </div>
+            <Button style={{ backgroundColor: "grey", padding: "0.57rem 0.75rem" }} title="Choose a file" />
+        </label>
     )
 }
 

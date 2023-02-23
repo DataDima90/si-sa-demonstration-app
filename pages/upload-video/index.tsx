@@ -23,13 +23,17 @@ const UploadVideo = () => {
             <div style={{ textAlign: "center", margin: "1rem 2rem" }}>
                 <img style={{ width: "300px", height: "100%" }} src={"https://img.freepik.com/free-vector/video-upload-concept-illustration_114360-4702.jpg?w=1060&t=st=1677175535~exp=1677176135~hmac=cf4a5c3547b08b04407fda5cb25315f1ffd084283e0e635fa64fc237d2d4771a"} />
             </div>
-            <div>
+            <div style={{ textAlign: "center" }}>
                 <div style={{ marginBottom: "0.5rem" }}>
                     <Input onChange={(e: any) => setFileData(e.target.files[0])} />
+                    <Button style={{ marginLeft: "0.5rem" }} icon={<AiOutlineDownload color={"white"} style={{ marginRight: "0.5rem", padding: "0" }} size={20} />} onClick={uploadFile} title={"Upload File"} />
                 </div>
-                {/*   <p>{fileData?.name}</p> */}
-                <Button icon={<AiOutlineDownload color={"white"} style={{ marginRight: "0.5rem", padding: "0" }} size={20} />} onClick={uploadFile} title={"Upload File"} />
-                {fileStatus ? "File uploaded successfully" : ""}
+                {fileData?.name ? <button style={{ backgroundColor: "#efefef", borderRadius: "0.5rem", border: "none", padding: "1rem", width: "280px" }}>
+                    {fileData?.name}
+                </button> : null}
+                <div>
+                    <p>{fileStatus ? "File uploaded successfully" : ""}</p>
+                </div>
             </div>
         </div >
     )
