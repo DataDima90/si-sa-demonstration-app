@@ -1,0 +1,32 @@
+@import "./../styles/variables";
+
+.button__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    background-color: blue;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: $border-transparent;
+    box-shadow: $shadow-default;
+    border-radius: $border-radius-default;
+    -webkit-transition: transform 500ms ease-out;
+    -moz-transition: transform 500ms ease-out;
+    -o-transition: transform 500ms ease-out;
+    transition: transform 500ms ease-out;
+    text-align: center;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-dark;
+        color: white;
+        border: 1px solid map-get($map: $colors, $key: primary-dark);
+      }
+
+    .button__text {
+        color: white
+    }
+}

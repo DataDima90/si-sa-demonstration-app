@@ -1,0 +1,33 @@
+.ebook-list {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  
+    &__heading {
+      margin-bottom: 1rem;
+      padding: 1rem
+    }
+  
+    &__filter__container {
+      margin-bottom: 1.5rem;
+    }
+  
+    &__filter-label {
+      margin-right: 0.5rem;
+    }
+  
+    &__filter-select {
+      padding: 0.5rem;
+    }
+  
+    &__list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  
+      &__item {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  

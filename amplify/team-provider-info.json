@@ -10,6 +10,17 @@
       "StackName": "amplify-sisademonstrationapp-dev-233715",
       "StackId": "arn:aws:cloudformation:eu-west-1:931631742975:stack/amplify-sisademonstrationapp-dev-233715/4bc50830-b238-11ed-a2d5-0638d56f1183",
       "AmplifyAppId": "d18edv3iuyo97z"
+    },
+    "categories": {
+      "auth": {
+        "sisademonstrationapp51792a0b": {}
+      },
+      "function": {
+        "S3Trigger98957795": {
+          "deploymentBucketName": "amplify-sisademonstrationapp-dev-233715-deployment",
+          "s3Key": "amplify-builds/S3Trigger98957795-44594a637233766e504a-build.zip"
+        }
+      }
     }
   }
 }

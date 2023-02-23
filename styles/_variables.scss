@@ -1,0 +1,55 @@
+$size-default: 1rem;
+
+//colors
+$colors: (
+  primary-font: black,
+  primary-dark: rgba(0, 109, 198, 1),
+  primary-dark-transparent: rgba(0, 109, 198, 0.8),
+  secondary-dark: red,
+  primary-background: white,
+  primary-light: rgba(80, 134, 187, 0.05),
+  secondary-light: grey,
+  neutrals-100: #ededee,
+  neutrals-300: #b9b9bd,
+  neutrals-600: #404047,
+  neutrals-700: #303036,
+  neutrals-900: #101011,
+  neutrals-base: #505059,
+  neutrals-dark: #202023,
+  neutrals-light: #73737b,
+  neutrals-lighter: #dcdcde,
+  neutrals-lightest: #f6f6f6,
+);
+
+//spacings
+$spacing-xxxs: 0.05rem;
+$spacing-xxs: 0.25rem;
+$spacing-xs: 0.5rem;
+$spacing-s: 0.75rem;
+$spacing-m: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+$spacing-xxxl: 4rem;
+
+//font-sizes
+$font-xs: 0.8rem;
+$font-s: 0.9rem;
+$font-standard: 1rem;
+$font-lg: 1.2rem;
+
+//border
+$border-transparent: $spacing-xxxs solid transparent;
+$border-radius-default: 0.25rem;
+$shadow-default: 0 2px 8px 1px rgba(0, 0, 0, 0.1);
+$shadow-light: 0 2px 8px 0.5px rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+//header
+$headers: (
+  space-x: 1.5rem,
+  space-y: 1.25rem,
+  space-x-mobile: 1rem,
+  space-y-mobile: 0.875rem,
+  padding: $spacing-m $spacing-lg $spacing-m $spacing-xl,
+);

@@ -1,0 +1,32 @@
+@import "variables.scss";
+
+//breakpoints
+@mixin big-desktop {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: 321px) {
+    @content;
+  }
+}
+
+@mixin mini-mobile {
+  @media (max-width: 320px) {
+    @content;
+  }
+}

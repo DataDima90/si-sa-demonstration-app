@@ -1,9 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '@/styles/Home.module.css'
-
+import FlexContainer from '@/containers/FlexContainer'
+import ProductView from '@/components/ProductView'
+import { useRouter } from 'next/router'
+import EBOOK_DATA from '@/data/eBookData'
+import EbookList from '@/components/EbookList'
+import CenterContainer from '@/containers/CenterContainer'
 
 export default function Home() {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -12,9 +16,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <h1>Test </h1>
-      </main>
+      <CenterContainer>
+        {/*         <FlexContainer>
+          {EBOOK_DATA.map((item, _) => {
+            return (
+              <ProductView key={item.id} onClick={() => router.push(
+                {
+                  pathname: "/book/[id]/",
+                  query: { id: item.id },
+                }
+              )} item={item} />
+            )
+          })}
+        </FlexContainer> */}
+        {/* <EbookList /> */}
+        <h1 style={{ textAlign: "center", margin: "1rem" }}>Hier entsteht eine Demonstration für das Projekt "Si-Sa"</h1>
+      </CenterContainer>
     </>
   )
 }

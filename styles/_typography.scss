@@ -1,0 +1,79 @@
+@import "mixins.scss";
+
+h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.2em;
+  margin: 0;
+
+  @include mobile {
+    font-size: 2.5rem;
+  }
+
+  @include tablet {
+    font-size: 3rem;
+  }
+  @include desktop {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+
+  @include mobile {
+    font-size: 2rem;
+  }
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+  @include desktop {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.2em;
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
+  @include desktop {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-style: normal;
+  font-weight: 300;
+  word-wrap: break-word;
+  font-size: 0.8rem;
+  line-height: 2em;
+  margin-top: 0.5rem;
+  color: map-get($map: $colors, $key: neutrals-base);
+
+  @include mobile {
+    font-size: 1rem;
+  }
+
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: map-get($map: $colors, $key: neutrals-base);
+
+  &:hover {
+    color: map-get($map: $colors, $key: primary-dark);
+  }
+}
