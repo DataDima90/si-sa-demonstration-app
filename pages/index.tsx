@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import FlexContainer from '@/containers/FlexContainer'
-import ProductView from '@/components/ProductView'
 import { useRouter } from 'next/router'
 import EBOOK_DATA from '@/data/eBookData'
-import EbookList from '@/components/EbookList'
+import EbookList from "./../components/EbookList"
 import CenterContainer from '@/containers/CenterContainer'
 
 export default function Home() {
@@ -17,18 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CenterContainer>
-        {/*         <FlexContainer>
-          {EBOOK_DATA.map((item, _) => {
-            return (
-              <ProductView key={item.id} onClick={() => router.push(
-                {
-                  pathname: "/book/[id]/",
-                  query: { id: item.id },
-                }
-              )} item={item} />
-            )
-          })}
-        </FlexContainer> */}
+
         {/* <EbookList /> */}
         <h1 style={{ textAlign: "center", margin: "1rem" }}>Hier entsteht eine Demonstration für das Projekt "Si-Sa"</h1>
       </CenterContainer>

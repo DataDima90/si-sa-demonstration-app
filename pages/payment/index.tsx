@@ -3,7 +3,7 @@ import CenterContainer from "@/containers/CenterContainer"
 import { useRouter } from "next/router"
 
 
-const index = () => {
+const Payment = () => {
     const router = useRouter()
 
     return (
@@ -14,4 +14,4 @@ const index = () => {
     )
 
 }
-export default index;
+export default Payment;

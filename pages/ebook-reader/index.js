@@ -1,16 +1,11 @@
 import React, { useRef, useState } from 'react'
 import { ReactReader } from 'react-reader'
 
-
-const index = () => {
-    const [progress, setProgress] = useState(0);
+const EBookReader = () => {
     const [page, setPage] = useState('')
     const renditionRef = useRef(null)
     const tocRef = useRef(null)
     const [location, setLocation] = useState(null)
-    const handleProgressChange = (event) => {
-        setProgress(Number(event.target.value));
-    };
     const locationChanged = epubcifi => {
         // epubcifi is a internal string used by epubjs to point to a location in an epub. It looks like this: epubcfi(/6/6[titlepage]!/4/2/12[pgepubid00003]/3:0)
         setLocation(epubcifi)
@@ -27,40 +22,28 @@ const index = () => {
     }
     return (
         <div style={{ height: '100vh' }}>
-            <input
-                type="range"
-                id="progress"
-                name="progress"
-                min="0"
-                max="100"
-                value={progress}
-/*                 onChange={handleProgressChange} */
-            />
             <ReactReader
-                /*                 location={location} */
-/*                 locationChanged={locationChanged} */
+                A
+                locationChanged={locationChanged}
                 url="https://react-reader.metabits.no/files/alice.epub"
-/*                 getRendition={rendition => (renditionRef.current = rendition)}
-                tocChanged={toc => (tocRef.current = toc)} */
-                epubOptions={{
-                    flow: 'scrolled',
-                    manager: 'continuous'
-                  }}
+                getRendition={rendition => (renditionRef.current = rendition)}
+                tocChanged={toc => (tocRef.current = toc)}
             />
             <div
                 style={{
                     position: 'absolute',
-                    bottom: '1rem',
+                    bottom: '0.5rem',
                     right: '1rem',
                     left: '1rem',
                     textAlign: 'center',
                     zIndex: 1
+                    
                 }}
             >
-                {page}
+                <p style={{margin: 0, padding: 0}}>{page}</p>
             </div>
         </div>
     )
 }
 
-export default index;
+export default EBookReader;

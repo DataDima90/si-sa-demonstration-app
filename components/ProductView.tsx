@@ -1,19 +1,7 @@
 import styles from "./ProductView.module.scss"
 import React from "react"
 
-
-interface IProductViewProps {
-    item: {
-        title: string
-        description: string,
-        priceType: string,
-        id: string,
-        imageURL: string
-    },
-
-}
-
-const ProductView = ({ item }: IProductViewProps) => {
+const ProductView = ({ item }: any) => {
     return (
         <div key={item.id}>
             <div>
@@ -21,7 +9,7 @@ const ProductView = ({ item }: IProductViewProps) => {
             </div>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            <p>{item.priceType}</p>
+            <p>{item.type}</p>
         </div>
     )
 }

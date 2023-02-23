@@ -4,9 +4,9 @@ import Button from "../../components/Button";
 import { AiOutlineDownload } from "react-icons/ai"
 import Input from "@/components/Input";
 
-const index = () => {
+const UploadVideo = () => {
 
-    const [fileData, setFileData] = useState();
+    const [fileData, setFileData] = useState({ name: "", type: "" });
     const [fileStatus, setFileStatus] = useState(false);
 
     const uploadFile = async () => {
@@ -28,13 +28,11 @@ const index = () => {
                     <Input onChange={(e: any) => setFileData(e.target.files[0])} />
                 </div>
                 {/*   <p>{fileData?.name}</p> */}
-                {/*              <div> */}
                 <Button icon={<AiOutlineDownload color={"white"} style={{ marginRight: "0.5rem", padding: "0" }} size={20} />} onClick={uploadFile} title={"Upload File"} />
-                {/*     </div> */}
                 {fileStatus ? "File uploaded successfully" : ""}
             </div>
         </div >
     )
 }
 
-export default index
+export default UploadVideo

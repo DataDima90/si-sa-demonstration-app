@@ -1,15 +1,13 @@
 import FlexContainer from "@/containers/FlexContainer"
 import Button from "./Button"
 import { useRouter } from "next/router"
+import style from "./ProductDetailView.module.scss"
 
 
 const ProductDetailView = (props: any) => {
-
     const router = useRouter()
-
     const { item } = props
 
-    console.log("item", item)
     return (
         <FlexContainer>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -20,6 +18,7 @@ const ProductDetailView = (props: any) => {
                 <h1>{item?.title}</h1>
                 <p>{item?.description}</p>
                 <p>{item?.type}</p>
+                <a className={style.link} onClick={() => router.push("/ebook-reader")}><span>Reading sample</span></a>
             </div>
         </FlexContainer>
     )

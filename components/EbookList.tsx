@@ -19,11 +19,11 @@ import FlexContainer from '@/containers/FlexContainer';
 const EbookList = () => {
     const [filter, setFilter] = useState('all');
 
-    const handleFilterChange = (event) => {
+    const handleFilterChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
         setFilter(event.target.value);
     };
 
-    const filteredEbooks = filter === 'all' ? eBooks : eBooks.filter(ebook => ebook.type === filter);
+    const filteredEbooks = filter === 'all' ? eBooks : eBooks.filter((ebook: { type: string; }) => ebook.type === filter);
 
     return (
         <div id="button" className={styles["ebook-list"]}>
@@ -41,7 +41,7 @@ const EbookList = () => {
             </div>
             <ul className={styles["ebook-list__list"]}>
                 <FlexContainer>
-                    {filteredEbooks.map((ebook, index) => (
+                    {filteredEbooks.map((ebook: { id: any; title?: string; description?: string; type?: string; imageURL?: string; }, index: React.Key | null | undefined) => (
                         <li key={index} className={styles["ebook-list__item"]}>
                             <Link href={`/ebook/${ebook.id}`}>
                                 <ProductView item={ebook} />
