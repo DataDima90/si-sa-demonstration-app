@@ -15,10 +15,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CenterContainer>
+      <CenterContainer style={{ flexDirection: "column" }}>
 
         {/* <EbookList /> */}
-        <h1 style={{ textAlign: 'center', margin: '1rem' }}>Hier entsteht eine Demonstration für das Projekt "Si-Sa"</h1>
+        <img style={{ width: "500px" }} src={"https://img.freepik.com/free-vector/engineer-developer-with-laptop-tablet-code-cross-platform-development-cross-platform-operating-systems-software-environments-concept-bright-vibrant-violet-isolated-illustration_335657-312.jpg?w=1480&t=st=1677182818~exp=1677183418~hmac=6bbb1f470c02619de130f17fca146e6475cf778aab640f7351641478f9378da7"} />
+        <h2 style={{ textAlign: 'center', margin: '1rem' }}>Hier entsteht eine Demonstration für das Projekt "Si-Sa".</h2>
       </CenterContainer>
     </>
   )
